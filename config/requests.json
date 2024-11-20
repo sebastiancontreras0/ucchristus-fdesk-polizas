@@ -1,0 +1,45 @@
+{
+    "getContratos": {
+        "schema": {
+            "method": "GET",
+            "host": "pznirg0ak6.execute-api.us-east-1.amazonaws.com",
+            "path": "/prd/contratos/<%= context.rut %>",
+            "headers": {
+                "Content-Type": "application/json",
+                "x-api-key": "<%=iparam.api_key %>"
+            }
+        }
+    },
+    "getAuthToken": {
+        "schema": {
+            "method": "POST",
+            "host": "ucc-svc-qa.kinetyccloud.com",
+            "path": "/KTL_CLV_KTL_FND_JAVA/webresources/authenticate/auth",
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "application/json"
+            },
+            "query": {
+                "userName": "Kinetyc",
+                "password": "Kin3tyc2023.!"
+            }
+        }
+    },
+    "getInfo": {
+        "schema": {
+            "method": "POST",
+            "host": "ucc-svc-qa.kinetyccloud.com",
+            "path": "/graphql",
+            "headers": {
+                "API-KEY": "34c6fceca75e456f25e7e99531e2425c6c1de443",
+                "AUTHORIZATION": "Bearer <%= context.auth_token %>",
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            "query": {
+                "query": "query { partyByRut(rut: \"<%= context.rut %>\") { idPar } }",
+                "variables": {}
+            }
+        }
+    }
+}

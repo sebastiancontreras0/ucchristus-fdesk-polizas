@@ -1,0 +1,25 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshdesk": {
+      "location": {
+        "ticket_top_navigation": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      },
+      "requests": {
+        "getContratos":{},
+        "getAuthToken": {},
+        "getInfo": {}
+      }
+    }
+  },
+  "dependencies": {
+    "graphql-request": "7.1.2"
+  },
+  "engines": {
+    "node": "18.16.0",
+    "fdk": "9.1.1"
+  }
+}

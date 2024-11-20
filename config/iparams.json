@@ -1,0 +1,9 @@
+{
+    "api_key": {
+        "display_name": "API Key",
+        "description": "API Key para contratos",
+        "type": "text",
+        "required": true,
+        "secure": true
+    }
+}
