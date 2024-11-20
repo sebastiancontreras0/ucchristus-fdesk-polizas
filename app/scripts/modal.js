@@ -225,6 +225,7 @@ async function getInfo(rut, auth){
     }
 }
 
+// se están realizando tests con el bearer token en duro.
 
 async function getInfoFetch(){
     const myHeaders = new Headers();
